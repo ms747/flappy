@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1477926317 source:/home/ms/Documents/C/codesdl/flappy/main.cpp
+	"bird.hpp"
+	"walls.hpp"
+	<vector>
+	<SDL2/SDL_ttf.h>
+
+1477924038 /home/ms/Documents/C/codesdl/flappy/bird.hpp
+	<SDL2/SDL2_gfxPrimitives.h>
+
+1477924038 source:/home/ms/Documents/C/codesdl/flappy/bird.cpp
+	"bird.hpp"
+
+1477924670 source:/home/ms/Documents/C/codesdl/flappy/walls.cpp
+	"walls.hpp"
+
+1477923277 /home/ms/Documents/C/codesdl/flappy/walls.hpp
+	<SDL2/SDL.h>
+	<SDL2/SDL2_gfxPrimitives.h>
+	<time.h>
+	"bird.hpp"
+

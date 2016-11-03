@@ -1,0 +1,425 @@
+<?xml version="1.0"?>
+
+<valgrindoutput>
+
+<protocolversion>4</protocolversion>
+<protocoltool>memcheck</protocoltool>
+
+<preamble>
+  <line>Memcheck, a memory error detector</line>
+  <line>Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.</line>
+  <line>Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info</line>
+  <line>Command: /home/ms/Documents/C/codesdl/flappy/bin/Debug/flappy </line>
+</preamble>
+
+<pid>5028</pid>
+<ppid>1958</ppid>
+<tool>memcheck</tool>
+
+<args>
+  <vargv>
+    <exe>/usr/bin/valgrind</exe>
+    <arg>--leak-check=full</arg>
+    <arg>--track-origins=yes</arg>
+    <arg>--xml=yes</arg>
+    <arg>--xml-file=/home/ms/Documents/C/codesdl/flappy/ValgrindOut.xml</arg>
+  </vargv>
+  <argv>
+    <exe>/home/ms/Documents/C/codesdl/flappy/bin/Debug/flappy</exe>
+    <arg></arg>
+  </argv>
+</args>
+
+<status>
+  <state>RUNNING</state>
+  <time>00:00:00:00.040 </time>
+</status>
+
+<error>
+  <unique>0x0</unique>
+  <tid>1</tid>
+  <kind>SyscallParam</kind>
+  <what>Syscall param writev(vector[...]) points to uninitialised byte(s)</what>
+  <stack>
+    <frame>
+      <ip>0x5F72B7D</ip>
+      <obj>/usr/lib/libc-2.24.so</obj>
+    </frame>
+    <frame>
+      <ip>0x77A8BAC</ip>
+      <obj>/usr/lib/libxcb.so.1.1.0</obj>
+    </frame>
+    <frame>
+      <ip>0x77A8FAC</ip>
+      <obj>/usr/lib/libxcb.so.1.1.0</obj>
+    </frame>
+    <frame>
+      <ip>0x77A902C</ip>
+      <obj>/usr/lib/libxcb.so.1.1.0</obj>
+      <fn>xcb_writev</fn>
+    </frame>
+    <frame>
+      <ip>0x749C18D</ip>
+      <obj>/usr/lib/libX11.so.6.3.0</obj>
+      <fn>_XSend</fn>
+    </frame>
+    <frame>
+      <ip>0x749C681</ip>
+      <obj>/usr/lib/libX11.so.6.3.0</obj>
+      <fn>_XReply</fn>
+    </frame>
+    <frame>
+      <ip>0x7487406</ip>
+      <obj>/usr/lib/libX11.so.6.3.0</obj>
+      <fn>XInternAtom</fn>
+    </frame>
+    <frame>
+      <ip>0x4EF2E4A</ip>
+      <obj>/usr/lib/libSDL2-2.0.so.0.4.0</obj>
+    </frame>
+    <frame>
+      <ip>0x4EF3C51</ip>
+      <obj>/usr/lib/libSDL2-2.0.so.0.4.0</obj>
+    </frame>
+    <frame>
+      <ip>0x4EE49C8</ip>
+      <obj>/usr/lib/libSDL2-2.0.so.0.4.0</obj>
+    </frame>
+    <frame>
+      <ip>0x4EE47B4</ip>
+      <obj>/usr/lib/libSDL2-2.0.so.0.4.0</obj>
+    </frame>
+    <frame>
+      <ip>0x4E48F46</ip>
+      <obj>/usr/lib/libSDL2-2.0.so.0.4.0</obj>
+    </frame>
+  </stack>
+  <auxwhat>Address 0x68ce7d3 is 35 bytes inside a block of size 16,384 alloc'd</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2BA4A</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>calloc</fn>
+    </frame>
+    <frame>
+      <ip>0x748C4E1</ip>
+      <obj>/usr/lib/libX11.so.6.3.0</obj>
+      <fn>XOpenDisplay</fn>
+    </frame>
+    <frame>
+      <ip>0x4EF2114</ip>
+      <obj>/usr/lib/libSDL2-2.0.so.0.4.0</obj>
+    </frame>
+    <frame>
+      <ip>0x4EE4760</ip>
+      <obj>/usr/lib/libSDL2-2.0.so.0.4.0</obj>
+    </frame>
+    <frame>
+      <ip>0x4E48F46</ip>
+      <obj>/usr/lib/libSDL2-2.0.so.0.4.0</obj>
+    </frame>
+    <frame>
+      <ip>0x400BE2</ip>
+      <obj>/home/ms/Documents/C/codesdl/flappy/bin/Debug/flappy</obj>
+      <fn>main</fn>
+      <dir>/home/ms/Documents/C/codesdl/flappy</dir>
+      <file>main.cpp</file>
+      <line>16</line>
+    </frame>
+  </stack>
+  <auxwhat>Uninitialised value was created by a stack allocation</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x74977C0</ip>
+      <obj>/usr/lib/libX11.so.6.3.0</obj>
+      <fn>XStoreColors</fn>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x2</unique>
+  <tid>1</tid>
+  <kind>SyscallParam</kind>
+  <what>Syscall param sendmsg(msg.msg_iov[0]) points to uninitialised byte(s)</what>
+  <stack>
+    <frame>
+      <ip>0x5F7B8E0</ip>
+      <obj>/usr/lib/libc-2.24.so</obj>
+      <fn>sendmsg</fn>
+    </frame>
+    <frame>
+      <ip>0xA6255E6</ip>
+      <obj>/usr/lib/libGLX_nvidia.so.370.28</obj>
+    </frame>
+    <frame>
+      <ip>0xA621448</ip>
+      <obj>/usr/lib/libGLX_nvidia.so.370.28</obj>
+    </frame>
+    <frame>
+      <ip>0xA5B9B0D</ip>
+      <obj>/usr/lib/libGLX_nvidia.so.370.28</obj>
+    </frame>
+    <frame>
+      <ip>0xBABF165</ip>
+      <obj>/usr/lib/libnvidia-glcore.so.370.28</obj>
+    </frame>
+    <frame>
+      <ip>0xBAB7903</ip>
+      <obj>/usr/lib/libnvidia-glcore.so.370.28</obj>
+    </frame>
+    <frame>
+      <ip>0xBAB9562</ip>
+      <obj>/usr/lib/libnvidia-glcore.so.370.28</obj>
+    </frame>
+    <frame>
+      <ip>0xBAB9D37</ip>
+      <obj>/usr/lib/libnvidia-glcore.so.370.28</obj>
+    </frame>
+    <frame>
+      <ip>0xA60E8D9</ip>
+      <obj>/usr/lib/libGLX_nvidia.so.370.28</obj>
+    </frame>
+    <frame>
+      <ip>0xBAB5EC7</ip>
+      <obj>/usr/lib/libnvidia-glcore.so.370.28</obj>
+    </frame>
+    <frame>
+      <ip>0xBAB6B08</ip>
+      <obj>/usr/lib/libnvidia-glcore.so.370.28</obj>
+    </frame>
+    <frame>
+      <ip>0xA5B9DB5</ip>
+      <obj>/usr/lib/libGLX_nvidia.so.370.28</obj>
+    </frame>
+  </stack>
+  <auxwhat>Address 0xffefffaac is on thread 1's stack</auxwhat>
+  <auxwhat>Uninitialised value was created by a stack allocation</auxwhat>
+  <stack>
+    <frame>
+      <ip>0xA5B9A80</ip>
+      <obj>/usr/lib/libGLX_nvidia.so.370.28</obj>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x5</unique>
+  <tid>1</tid>
+  <kind>InvalidRead</kind>
+  <what>Invalid read of size 8</what>
+  <stack>
+    <frame>
+      <ip>0x4EE09AA</ip>
+      <obj>/usr/lib/libSDL2-2.0.so.0.4.0</obj>
+    </frame>
+    <frame>
+      <ip>0x4E8808A</ip>
+      <obj>/usr/lib/libSDL2-2.0.so.0.4.0</obj>
+    </frame>
+    <frame>
+      <ip>0x400CC3</ip>
+      <obj>/home/ms/Documents/C/codesdl/flappy/bin/Debug/flappy</obj>
+      <fn>main</fn>
+      <dir>/home/ms/Documents/C/codesdl/flappy</dir>
+      <file>main.cpp</file>
+      <line>51</line>
+    </frame>
+  </stack>
+  <auxwhat>Address 0xd9390a0 is 0 bytes inside a block of size 216 free'd</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2AD90</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>free</fn>
+    </frame>
+    <frame>
+      <ip>0x400CB4</ip>
+      <obj>/home/ms/Documents/C/codesdl/flappy/bin/Debug/flappy</obj>
+      <fn>main</fn>
+      <dir>/home/ms/Documents/C/codesdl/flappy</dir>
+      <file>main.cpp</file>
+      <line>50</line>
+    </frame>
+  </stack>
+  <auxwhat>Block was alloc'd at</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2BA4A</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>calloc</fn>
+    </frame>
+    <frame>
+      <ip>0x4EE4909</ip>
+      <obj>/usr/lib/libSDL2-2.0.so.0.4.0</obj>
+    </frame>
+    <frame>
+      <ip>0x400C07</ip>
+      <obj>/home/ms/Documents/C/codesdl/flappy/bin/Debug/flappy</obj>
+      <fn>main</fn>
+      <dir>/home/ms/Documents/C/codesdl/flappy</dir>
+      <file>main.cpp</file>
+      <line>18</line>
+    </frame>
+  </stack>
+</error>
+
+
+<status>
+  <state>FINISHED</state>
+  <time>00:00:00:30.074 </time>
+</status>
+
+<error>
+  <unique>0xb</unique>
+  <tid>1</tid>
+  <kind>Leak_DefinitelyLost</kind>
+  <xwhat>
+    <text>12 bytes in 1 blocks are definitely lost in loss record 6 of 136</text>
+    <leakedbytes>12</leakedbytes>
+    <leakedblocks>1</leakedblocks>
+  </xwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2A0FC</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>operator new(unsigned long)</fn>
+    </frame>
+    <frame>
+      <ip>0x400BBA</ip>
+      <obj>/home/ms/Documents/C/codesdl/flappy/bin/Debug/flappy</obj>
+      <fn>main</fn>
+      <dir>/home/ms/Documents/C/codesdl/flappy</dir>
+      <file>main.cpp</file>
+      <line>15</line>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x80</unique>
+  <tid>1</tid>
+  <kind>Leak_DefinitelyLost</kind>
+  <xwhat>
+    <text>4,096 bytes in 1 blocks are definitely lost in loss record 123 of 136</text>
+    <leakedbytes>4096</leakedbytes>
+    <leakedblocks>1</leakedblocks>
+  </xwhat>
+  <stack>
+    <frame>
+      <ip>0x4C29BBE</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>malloc</fn>
+    </frame>
+    <frame>
+      <ip>0xE48D10F</ip>
+    </frame>
+    <frame>
+      <ip>0xE4913E0</ip>
+    </frame>
+    <frame>
+      <ip>0x4EFEF10</ip>
+      <obj>/usr/lib/libSDL2-2.0.so.0.4.0</obj>
+    </frame>
+    <frame>
+      <ip>0x4EFF55E</ip>
+      <obj>/usr/lib/libSDL2-2.0.so.0.4.0</obj>
+    </frame>
+    <frame>
+      <ip>0x4EFB85D</ip>
+      <obj>/usr/lib/libSDL2-2.0.so.0.4.0</obj>
+    </frame>
+    <frame>
+      <ip>0x4E8098B</ip>
+      <obj>/usr/lib/libSDL2-2.0.so.0.4.0</obj>
+    </frame>
+    <frame>
+      <ip>0x4E48F84</ip>
+      <obj>/usr/lib/libSDL2-2.0.so.0.4.0</obj>
+    </frame>
+    <frame>
+      <ip>0x400BE2</ip>
+      <obj>/home/ms/Documents/C/codesdl/flappy/bin/Debug/flappy</obj>
+      <fn>main</fn>
+      <dir>/home/ms/Documents/C/codesdl/flappy</dir>
+      <file>main.cpp</file>
+      <line>16</line>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x81</unique>
+  <tid>1</tid>
+  <kind>Leak_DefinitelyLost</kind>
+  <xwhat>
+    <text>4,096 bytes in 1 blocks are definitely lost in loss record 124 of 136</text>
+    <leakedbytes>4096</leakedbytes>
+    <leakedblocks>1</leakedblocks>
+  </xwhat>
+  <stack>
+    <frame>
+      <ip>0x4C29BBE</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>malloc</fn>
+    </frame>
+    <frame>
+      <ip>0xE48D10F</ip>
+    </frame>
+    <frame>
+      <ip>0xE48CA4B</ip>
+    </frame>
+    <frame>
+      <ip>0xE49541B</ip>
+    </frame>
+    <frame>
+      <ip>0xE493582</ip>
+    </frame>
+    <frame>
+      <ip>0xE490F7F</ip>
+    </frame>
+    <frame>
+      <ip>0xE4962E6</ip>
+    </frame>
+    <frame>
+      <ip>0xE48E188</ip>
+    </frame>
+    <frame>
+      <ip>0x4EFEF37</ip>
+      <obj>/usr/lib/libSDL2-2.0.so.0.4.0</obj>
+    </frame>
+    <frame>
+      <ip>0x4EFF55E</ip>
+      <obj>/usr/lib/libSDL2-2.0.so.0.4.0</obj>
+    </frame>
+    <frame>
+      <ip>0x4EFB85D</ip>
+      <obj>/usr/lib/libSDL2-2.0.so.0.4.0</obj>
+    </frame>
+    <frame>
+      <ip>0x4E8098B</ip>
+      <obj>/usr/lib/libSDL2-2.0.so.0.4.0</obj>
+    </frame>
+  </stack>
+</error>
+
+<errorcounts>
+  <pair>
+    <count>1</count>
+    <unique>0x5</unique>
+  </pair>
+  <pair>
+    <count>4</count>
+    <unique>0x0</unique>
+  </pair>
+  <pair>
+    <count>1</count>
+    <unique>0x2</unique>
+  </pair>
+</errorcounts>
+
+<suppcounts>
+</suppcounts>
+
+</valgrindoutput>
+
